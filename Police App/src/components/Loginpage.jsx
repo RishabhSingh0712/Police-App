@@ -1,4 +1,7 @@
 import React, { useState } from "react";
+import Header from "./Header";
+import { Link } from "react-router-dom";
+
 
 const LoginPage = () => {
   const [username, setUsername] = useState("");
@@ -14,7 +17,7 @@ const LoginPage = () => {
       // You might want to use localStorage or sessionStorage to store login state
       // localStorage.setItem('loggedIn', 'true');
     } else {
-      alert("Invalid username or password");
+      alert("Invalid Number or Password");
     }
   };
 
@@ -27,7 +30,9 @@ const LoginPage = () => {
   };
 
   return (
-    <div className="flex justify-center items-center h-screen bg-gray-100">
+    <>
+    <Header />
+    <div className="flex justify-center items-center h-screen bg-gray-600">
       <div className="bg-white p-8 rounded shadow-md">
         {loggedIn ? (
           <div>
@@ -78,11 +83,16 @@ const LoginPage = () => {
             >
               Login
             </button>
+            <div>
+              <h1>New User? <Link to = '/RegisterForm'className="text-yellow-500 hover:text-blue-600 mb-4" href="">Register Here</Link></h1>
+            </div>
           </form>
         )}
       </div>
     </div>
+    </>
   );
 };
+
 
 export default LoginPage;
