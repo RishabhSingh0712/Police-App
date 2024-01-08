@@ -4,7 +4,7 @@ import Loginpage from "./components/Loginpage";
 import Complaint from "./components/Complaint";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import RegisterForm from "./components/RegisterForm";
-import Home from "./components/Home";
+// import Home from "./components/Home";
 
 function App() {
   return (
@@ -18,20 +18,13 @@ function App() {
             path="/RegisterForm"
             element={
               <>
-                <Home/>
+                {/* <Home/> */}
                 <Header />
                 <RegisterForm />
               </>
             }
           />
-          <Route
-            path="/"
-            element={
-              <>
-                <Header />
-              </>
-            }
-          />
+         
         </Routes>
       </Router>
     </div>
