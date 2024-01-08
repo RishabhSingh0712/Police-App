@@ -10,12 +10,10 @@ const LoginPage = () => {
 
   const handleLogin = (e) => {
     e.preventDefault();
-    // Add your authentication logic here (e.g., API calls)
-    // For demonstration purposes, let's assume a simple check
+    
     if (username === "username" && password === "password") {
       setLoggedIn(true);
-      // You might want to use localStorage or sessionStorage to store login state
-      // localStorage.setItem('loggedIn', 'true');
+     
     } else {
       alert("Invalid Number or Password");
     }
@@ -25,8 +23,7 @@ const LoginPage = () => {
     setLoggedIn(false);
     setUsername("");
     setPassword("");
-    // Clear localStorage or sessionStorage on logout
-    // localStorage.removeItem('loggedIn');
+   
   };
 
   return (
