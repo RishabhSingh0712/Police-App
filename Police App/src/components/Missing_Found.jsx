@@ -1,24 +1,181 @@
-import React from 'react';
-import Header from './Header';
+import React, { useState } from "react";
+import Header from "./Header";
 
 const Missing_Found = () => {
+  const [activeTab, setActiveTab] = useState("app");
+
+  const handleTabClick = (tab) => {
+    setActiveTab(tab);
+  };
+
   return (
-    <div>
-      <Header/>
-      <div className="flex justify-center my-32">
-        <button className="bg-yellow-500 hover:bg-gray-500 text-black font-bold py-2 px-4 rounded mr-[45rem]">
-          Missing
-        </button>
-        <button className="bg-yellow-500 hover:bg-gray-500 text-black font-bold py-2 px-4 rounded">
-          Found
-        </button>
+    <>
+      <Header />
+      <div className="w-2/3 mt-[8rem]">
+        <div className="relative right-0">
+          <ul
+            className="relative flex flex-wrap p-1 list-none rounded-xl bg-blue-gray-50/60"
+            data-tabs="tabs"
+            role="list"
+          >
+            <li className="z-30 flex-auto text-center">
+              <a
+                onClick={() => handleTabClick("app")}
+                className={`${
+                  activeTab === "app"
+                    ? "bg-yellow-400 text-black"
+                    : "text-slate-700 bg-inherit"
+                } z-30 flex items-center justify-center w-full px-0 py-1 mb-0 transition-all ease-in-out border-0 rounded-lg cursor-pointer`}
+                data-tab-target=""
+                active=""
+                role="tab"
+                aria-selected={activeTab === "app"}
+                aria-controls="app"
+              >
+                <span className="ml-1">Missing</span>
+              </a>
+            </li>
+            <li className="z-30 flex-auto text-center">
+              <a
+                onClick={() => handleTabClick("message")}
+                className={`${
+                  activeTab === "message"
+                    ? "bg-yellow-400 text-black"
+                    : "text-slate-700 bg-inherit"
+                } z-30 flex items-center justify-center w-full px-0 py-1 mb-0 transition-all ease-in-out border-0 rounded-lg cursor-pointer`}
+                data-tab-target=""
+                role="tab"
+                aria-selected={activeTab === "message"}
+                aria-controls="message"
+              >
+                <span className="ml-1">Found</span>
+              </a>
+            </li>
+          </ul>
+          <div data-tab-content="" className="p-5">
+            <div
+              className={`${
+                activeTab === "app" ? "block opacity-100" : "hidden opacity-0"
+              }`}
+              id="app"
+              role="tabpanel"
+            >
+              <p className="font-sans text-base antialiased font-light leading-relaxed text-inherit text-blue-gray-500 flex items-center space-x-8">
+                <div class="relative flex flex-col text-gray-700  bg-white shadow-md bg-clip-border rounded-xl w-40">
+                  <div class="relative mx-4 mt-4 overflow-hidden text-gray-700  bg-white shadow-lg bg-clip-border rounded-xl h-20">
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/128/3280/3280979.png"
+                      alt="profile-picture"
+                    />
+                  </div>
+                  <div class=" text-center ">
+                    <a
+                      href="/PersonForm"
+                      className="block font-sans  text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900 hover:bg-yellow-200"
+                    >
+                      Person
+                    </a>
+                  </div>
+                </div>
+                <div class="relative flex flex-col text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-40">
+                  <div class="relative mx-4 mt-4 overflow-hidden text-gray-700 bg-white shadow-lg bg-clip-border rounded-xl h-20">
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/128/2962/2962303.png"
+                      alt="profile-picture"
+                    />
+                  </div>
+                  <div class=" text-center ">
+                    <button class="block ml-7 font-sans text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
+                      Vechile
+                    </button>
+                  </div>
+                </div>
+                <div class="relative flex flex-col text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-40">
+                  <div class="relative mx-4 mt-4 overflow-hidden text-gray-700 bg-white shadow-lg bg-clip-border rounded-xl h-20">
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/128/3460/3460335.png"
+                      alt="profile-picture"
+                    />
+                  </div>
+                  <div class=" text-center ">
+                    <button class="block ml-10 font-sans text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
+                      Pets
+                    </button>
+                  </div>
+                </div>
+                <div class="relative flex flex-col text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-40">
+                  <div class="relative mx-4 mt-4 overflow-hidden text-gray-700 bg-white shadow-lg bg-clip-border rounded-xl h-20">
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/128/3277/3277380.png"
+                      alt="profile-picture"
+                    />
+                  </div>
+                  <div class=" text-center ">
+                    <button class="block ml-10 font-sans text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
+                      Bag
+                    </button>
+                  </div>
+                </div>
+                <div class="relative flex flex-col text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-40">
+                  <div class="relative mx-4 mt-4 overflow-hidden text-gray-700 bg-white shadow-lg bg-clip-border rounded-xl h-20">
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/128/3437/3437364.png"
+                      alt="profile-picture"
+                    />
+                  </div>
+                  <div class=" text-center ">
+                    <button class="block ml-7 font-sans text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
+                      Mobiles
+                    </button>
+                  </div>
+                </div>
+                <div class="relative flex flex-col text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-40">
+                  <div class="relative mx-4 mt-4 overflow-hidden text-gray-700 bg-white shadow-lg bg-clip-border rounded-xl h-20">
+                    <img
+                      src="https://cdn-icons-png.flaticon.com/128/10348/10348626.png"
+                      alt="profile-picture"
+                    />
+                  </div>
+                  <div>
+                    <button class="block ml-7 font-sans text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
+                      Others
+                    </button>
+                  </div>
+                </div>
+              </p>
+            </div>
+            <div
+              className={`${
+                activeTab === "message"
+                  ? "block opacity-100"
+                  : "hidden opacity-0"
+              }`}
+              id="message"
+              role="tabpanel"
+            >
+              <p className="block font-sans text-base antialiased font-light leading-relaxed text-inherit text-blue-gray-500">
+                The reading of all good books is like a conversation with the
+                finest minds of past centuries.
+              </p>
+            </div>
+            <div
+              className={`${
+                activeTab === "settings"
+                  ? "block opacity-100"
+                  : "hidden opacity-0"
+              }`}
+              id="settings"
+              role="tabpanel"
+            >
+              <p className="block font-sans text-base antialiased font-light leading-relaxed text-inherit text-blue-gray-500">
+                Comparing yourself to others is the thief of joy.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 
 export default Missing_Found;
-
-
-
-
