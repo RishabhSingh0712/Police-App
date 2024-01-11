@@ -69,7 +69,7 @@ const PersonForm = () => {
                 />
               </div>
               <div>
-                <label htmlFor="name" className="sr-only">
+                <label htmlFor="Age" className="sr-only">
                   Age
                 </label>
                 <input
