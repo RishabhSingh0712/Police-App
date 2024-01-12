@@ -85,9 +85,12 @@ const Missing_Found = () => {
                     />
                   </div>
                   <div class=" text-center ">
-                    <button class="block ml-7 font-sans text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
+                  <a
+                      href="/VechileForm"
+                      className="block font-sans  text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900 hover:bg-yellow-200"
+                    >
                       Vechile
-                    </button>
+                    </a>
                   </div>
                 </div>
                 <div class="relative flex flex-col text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-40">
@@ -98,9 +101,12 @@ const Missing_Found = () => {
                     />
                   </div>
                   <div class=" text-center ">
-                    <button class="block ml-10 font-sans text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
+                  <a
+                      href="/PetForm"
+                      className="block font-sans  text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900 hover:bg-yellow-200"
+                    >
                       Pets
-                    </button>
+                    </a>
                   </div>
                 </div>
                 <div class="relative flex flex-col text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-40">
@@ -111,9 +117,12 @@ const Missing_Found = () => {
                     />
                   </div>
                   <div class=" text-center ">
-                    <button class="block ml-10 font-sans text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
+                  <a
+                      href="/BagForm"
+                      className="block font-sans  text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900 hover:bg-yellow-200"
+                    >
                       Bag
-                    </button>
+                    </a>
                   </div>
                 </div>
                 <div class="relative flex flex-col text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-40">
@@ -124,9 +133,12 @@ const Missing_Found = () => {
                     />
                   </div>
                   <div class=" text-center ">
-                    <button class="block ml-7 font-sans text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
+                  <a
+                      href="/MobileForm"
+                      className="block font-sans  text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900 hover:bg-yellow-200"
+                    >
                       Mobiles
-                    </button>
+                    </a>
                   </div>
                 </div>
                 <div class="relative flex flex-col text-gray-700 bg-white shadow-md bg-clip-border rounded-xl w-40">
@@ -137,9 +149,12 @@ const Missing_Found = () => {
                     />
                   </div>
                   <div>
-                    <button class="block ml-7 font-sans text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
+                  <a
+                      href="/OtherForm"
+                      className="block font-sans  text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900 hover:bg-yellow-200"
+                    >
                       Others
-                    </button>
+                    </a>
                   </div>
                 </div>
               </p>
