@@ -11,9 +11,6 @@ const MobileForm = () => {
     address: '',
     city: '',
     state: '',
-    password: '',
-    confirmPassword: '',
-    pincode: '',
     photo: null,
   });
 
@@ -38,7 +35,7 @@ const MobileForm = () => {
     <div className="min-h-screen flex items-center justify-center overflow-hidden max-h-full bg-gray-600 py-24 px-4 sm:px-6 lg:px-8">
       <div className="max-w-md w-full space-y-8 overflow-y-auto">
         <div>
-          <h2 className="mt-6 text-center text-3xl text-white">Complain of Missing Person</h2>
+          <h2 className="mt-6 text-center text-3xl text-white">Complain of Missing Mobile</h2>
         </div>
         <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
           <div className="rounded-md shadow-sm -space-y-px">
