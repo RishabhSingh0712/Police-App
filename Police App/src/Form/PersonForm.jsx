@@ -7,7 +7,6 @@ const PersonForm = () => {
     dob: '',
     mobile: '',
     email: '',
-    aadhar: '',
     address: '',
     city: '',
     state: '',
