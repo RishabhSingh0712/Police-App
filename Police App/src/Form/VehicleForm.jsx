@@ -193,36 +193,35 @@ const VechileForm = () => {
                 Vehicle Owner
                 </label>
                 <input
-                  id="realtiveemail"
-                  name="realtiveemail"
+                  id="vehicleowner"
+                  name="vehicleowner"
                   type="text"
-                  autoComplete="realtiveemail"
+                  autoComplete="vehicleowner"
                   required
                   className="appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
-                  placeholder="Enter Person's Relative Email"
-                  value={formData.realtiveemail}
+                  placeholder="Enter Vehicle Owner Name"
+                  value={formData.vehicleowner}
                   onChange={handleInputChange}
                 />
               </div>
               <div>
-                <label htmlFor="mobile" className="sr-only">
-                  Mobile Number
+                <label htmlFor="vehicleownermobilenumber" className="sr-only">
+                Vehicle Owner Mobile Number
                 </label>
                 <input
-                  id="mobile"
-                  name="mobile"
+                  id="vehicleownermobilenumber"
+                  name="vehicleownermobilenumber"
                   type="number"
                   autoComplete="tel"
                   required
                   className="appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:z-10 focus:border-indigo-500 rounded-b-md focus:outline-none focus:ring-indigo-500 sm:text-sm"
-                  placeholder="Enter Person's Relative Number"
-                  value={formData.mobile}
+                  placeholder="Enter Vehicle Owner Mobile Number"
+                  value={formData.vehicleownermobilenumber}
                   onChange={handleInputChange}
                 />
               </div>
             </div>
           </div>
-
           <div>
             <button
               type="submit"
