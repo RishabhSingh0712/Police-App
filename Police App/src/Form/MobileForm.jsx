@@ -3,14 +3,13 @@ import Header from "../components/Header";
 
 const MobileForm = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    dob: '',
-    mobile: '',
-    email: '',
-    aadhar: '',
-    address: '',
-    city: '',
-    state: '',
+    mobilemodel: '',
+    imei1: '',
+    imei2: '',
+    missinglocation: '',
+    missingdate: '',
+    mobileownername: '',
+    ownermobilenumber: '',
     photo: null,
   });
 
@@ -42,213 +41,50 @@ const MobileForm = () => {
             <div className="grid grid-cols-1 gap-6">
 
               <div>
-                <label htmlFor="name" className="sr-only">
-                  Name
+                <label htmlFor="mobilemodel" className="sr-only">
+                Mobile Model
                 </label>
                 <input
-                  id="name"
-                  name="name"
+                  id="mobilemodel"
+                  name="mobilemodel"
                   type="text"
-                  autoComplete="name"
+                  autoComplete="mobilemodel"
                   required
                   className="appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
-                  placeholder="Missing Person Name"
-                  value={formData.name}
+                  placeholder="Select Mobile Model"
+                  value={formData.mobilemodel}
                   onChange={handleInputChange}
                 />
               </div>
               <div>
-                <label htmlFor="Age" className="sr-only">
-                  Age
+                <label htmlFor="imei1" className="sr-only">
+                IMEI 1
                 </label>
                 <input
-                  id="age"
-                  name="age"
-                  type="number"
-                  autoComplete="age"
-                  required
-                  className="appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
-                  placeholder="Missing Person Age"
-                  value={formData.age}
-                  onChange={handleInputChange}
-                />
-              </div>
-              <div>
-                <label htmlFor="date" className="sr-only">
-                  Date
-                </label>
-                <input
-                  id="date"
-                  name="date"
-                  type="string"
-                  autoComplete="date"
-                  required
-                  className="appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
-                  placeholder="Enter Missing Date"
-                  value={formData.date}
-                  onChange={handleInputChange}
-                />
-              </div>
-              <div>
-                  <label htmlFor="gender" className="sr-only">
-                    Gender
-                  </label>
-                  <select
-                    id="gender"
-                    name="gender"
-                    autoComplete="gender"
-                    required
-                    className="appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
-                    value={formData.gender}
-                    onChange={handleInputChange}
-                  >
-                    <option value="">Enter Person Gender</option>
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
-                    <option value="other">Other</option>
-                  </select>
-                </div>
-                <div>
-                <label htmlFor="height" className="sr-only">
-                  Height
-                </label>
-                <input
-                  id="height"
-                  name="height"
-                  type="number"
-                  autoComplete="height"
-                  required
-                  className="appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
-                  placeholder="Enter Person Height (in CM)"
-                  value={formData.height}
-                  onChange={handleInputChange}
-                />
-              </div>
-                <div>
-                <label htmlFor="weight" className="sr-only">
-                  Weight
-                </label>
-                <input
-                  id="weight"
-                  name="weight"
-                  type="number"
-                  autoComplete="weight"
-                  required
-                  className="appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
-                  placeholder="Enter Person Weight (in kg)"
-                  value={formData.weight}
-                  onChange={handleInputChange}
-                />
-              </div>
-              <div>
-                <label htmlFor="address" className="sr-only">
-                  Address
-                </label>
-                <input
-                  id="address"
-                  name="address"
+                  id="imei1"
+                  name="imei1"
                   type="text"
-                  autoComplete="off"
-                  required
-                  className="appearance-none  relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
-                  placeholder="Address"
-                  value={formData.address}
-                  onChange={handleInputChange}
-                />
-              </div>
-              <div>
-                <label htmlFor="city" className="sr-only">
-                  City
-                </label>
-                <input
-                  id="city"
-                  name="city"
-                  type="text"
-                  autoComplete="address-level2"
-                  required
-                  className="appearance-none  relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
-                  placeholder="City"
-                  value={formData.city}
-                  onChange={handleInputChange}
-                />
-              </div>
-              <div>
-                <label htmlFor="state" className="sr-only">
-                  State
-                </label>
-                <input
-                  id="state"
-                  name="state"
-                  type="text"
-                  autoComplete="address-level1"
-                  required
-                  className="appearance-none  relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
-                  placeholder="State"
-                  value={formData.state}
-                  onChange={handleInputChange}
-                />
-              </div>
-              <div>
-                <label htmlFor="pincode" className="sr-only">
-                  Pin Code
-                </label>
-                <input
-                  id="pincode"
-                  name="pincode"
-                  type="number"
-                  autoComplete="postal-code"
-                  required
-                  className="appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
-                  placeholder="Pin Code"
-                  value={formData.pincode}
-                  onChange={handleInputChange}
-                />
-              </div>
-              <div>
-                <label htmlFor="realtivename" className="sr-only">
-                Realtive name
-                </label>
-                <input
-                  id="realtivename"
-                  name="realtivename"
-                  type="text"
-                  autoComplete="realtivename"
+                  autoComplete="imei1"
                   required
                   className="appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
-                  placeholder="Enter Person's Relative Name"
-                  value={formData.realtivename}
+                  placeholder="Enter IMEI 1 Number"
+                  value={formData.imei1}
                   onChange={handleInputChange}
                 />
               </div>
               <div>
-                <label htmlFor="realtiveemail" className="sr-only">
-                Realtive email
+                <label htmlFor="imei2" className="sr-only">
+                  IMEI 2
                 </label>
                 <input
-                  id="realtiveemail"
-                  name="realtiveemail"
+                  id="imei2"
+                  name="imei2"
                   type="text"
-                  autoComplete="realtiveemail"
+                  autoComplete="imei2"
                   required
                   className="appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
-                  placeholder="Enter Person's Relative Email"
-                  value={formData.realtiveemail}
-                  onChange={handleInputChange}
-                />
-              </div>
-              <div>
-                <label htmlFor="mobile" className="sr-only">
-                  Mobile Number
-                </label>
-                <input
-                  id="mobile"
-                  name="mobile"
-                  type="number"
-                  autoComplete="tel"
-                  required
-                  className="appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:z-10 focus:border-indigo-500 rounded-b-md focus:outline-none focus:ring-indigo-500 sm:text-sm"
-                  placeholder="Enter Person's Relative Number"
-                  value={formData.mobile}
+                  placeholder="Enter IMEI 2 Number"
+                  value={formData.imei2}
                   onChange={handleInputChange}
                 />
               </div>
@@ -268,6 +104,69 @@ const MobileForm = () => {
                   onChange={handleInputChange}
                 />
               </div>
+                <div>
+                <label htmlFor="missingdate" className="sr-only">
+                Missing Date
+                </label>
+                <input
+                  id="missingdate"
+                  name="missingdate"
+                  type="text"
+                  autoComplete="missingdate"
+                  required
+                  className="appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                  placeholder="Enter Missing Date"
+                  value={formData.missingdate}
+                  onChange={handleInputChange}
+                />
+              </div>
+              <div>
+                <label htmlFor="mobileownername" className="sr-only">
+                Mobile Owner Name
+                </label>
+                <input
+                  id="mobileownername"
+                  name="mobileownername"
+                  type="text"
+                  autoComplete="mobileownername"
+                  required
+                  className="appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                  placeholder="Enter Mobile Owner's Name"
+                  value={formData.mobileownername}
+                  onChange={handleInputChange}
+                />
+              </div>
+              <div>
+                <label htmlFor="ownermobilenumber" className="sr-only">
+                Owner Mobile Number
+                </label>
+                <input
+                  id="ownermobilenumber"
+                  name="ownermobilenumber"
+                  type="number"
+                  autoComplete="tel"
+                  required
+                  className="appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:z-10 focus:border-indigo-500 rounded-b-md focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                  placeholder="Enter Owner's Mobile Number"
+                  value={formData.ownermobilenumber}
+                  onChange={handleInputChange}
+                />
+              </div>
+              <div>
+                  <label htmlFor="image" className="sr-only">
+                    Upload Image
+                  </label>
+                  <input
+                    id="image"
+                    name="image"
+                    type="file"
+                    accept="image/*"
+                    required
+                    onChange={handleFileChange}
+                    className="appearance-none  relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:z-10 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
+                    placeholder="Enter Mobile Pictures"
+                  />
+                </div>
             </div>
           </div>
 
