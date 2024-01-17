@@ -4,16 +4,19 @@ import Header from "../components/Header";
 const PersonForm = () => {
   const [formData, setFormData] = useState({
     name: '',
-    dob: '',
-    mobile: '',
-    email: '',
+    age: '',
+    date: '',
+    gender: '',
+    height: '',
+    weight: '',
     address: '',
     city: '',
     state: '',
-    password: '',
-    confirmPassword: '',
+    realtivename: '',
+    realtiveemail: '',
     pincode: '',
-    photo: null,
+    mobile: '',
+    missinglocation: '',
   });
 
   const handleInputChange = (e) => {
