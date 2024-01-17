@@ -3,18 +3,17 @@ import Header from "../components/Header";
 
 const VechileForm = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    dob: '',
-    mobile: '',
-    email: '',
-    aadhar: '',
-    address: '',
-    city: '',
-    state: '',
-    password: '',
-    confirmPassword: '',
-    pincode: '',
-    photo: null,
+    vehicletype: '',
+    vehiclenumber: '',
+    missingdate: '',
+    vehiclebrand: '',
+    vehiclecolor: '',
+    vehiclemodal: '',
+    enginenumber: '',
+    chassisnumber: '',
+    missinglocation: '',
+    vehicleowner: '',
+    vehicleownermobilenumber: '',
   });
 
   const handleInputChange = (e) => {
