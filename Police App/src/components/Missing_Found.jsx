@@ -151,7 +151,7 @@ const Missing_Found = () => {
                   <div>
                   <a
                       href="/OtherForm"
-                      className="block font-sans  text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900 hover:bg-yellow-200"
+                      className="block font-sans  text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900 hover:bg-yellow-200 ml-7"
                     >
                       Others
                     </a>
@@ -169,8 +169,7 @@ const Missing_Found = () => {
               role="tabpanel"
             >
               <p className="block font-sans text-base antialiased font-light leading-relaxed text-inherit text-blue-gray-500">
-                The reading of all good books is like a conversation with the
-                finest minds of past centuries.
+                Not found
               </p>
             </div>
             <div
