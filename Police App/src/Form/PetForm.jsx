@@ -3,17 +3,12 @@ import Header from "../components/Header";
 
 const PetForm = () => {
   const [formData, setFormData] = useState({
-    name: "",
-    dob: "",
-    mobile: "",
-    email: "",
-    aadhar: "",
-    address: "",
-    city: "",
-    state: "",
-    password: "",
-    confirmPassword: "",
-    pincode: "",
+    petbreed: "",
+    petcolor: "",
+    missinglocation: "",
+    missingdate: "",
+    petowner: "",
+    petownernumber: "",
     photo: null,
   });
 
